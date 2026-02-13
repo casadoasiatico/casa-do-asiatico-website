@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+@theme {
+  --color-primary: #da0d26;
+  --color-black: #000000;
+  --color-white: #FFFFFF;
+  --font-heading: 'Barlow Condensed', sans-serif;
+  --font-body: 'Space Grotesk', sans-serif;
+}
+
+:root {
+  font-family: var(--font-body);
+  line-height: 1.5;
+  font-weight: 400;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  /* Lenis handles smooth scrolling */
+}
+
+body {
+  margin: 0;
+  width: 100%;
+  min-height: 100vh;
+  @apply bg-black text-white overflow-x-hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+}
+
+::selection {
+  background-color: var(--color-primary);
+  color: white;
+}
