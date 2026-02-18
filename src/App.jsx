@@ -1,18 +1,25 @@
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import Header from './components/Header';
-import Hero from './components/Hero';
-import Features from './components/Features';
-import Brands from './components/Brands';
-import About from './components/About';
-import QuoteBanner from './components/QuoteBanner';
-import Products from './components/Products';
-import Testimonials from './components/Testimonials';
-import FAQ from './components/FAQ';
-import Partners from './components/Partners';
+import Home from './components/Home';
+import PrivacyPolicy from './components/PrivacyPolicy';
+import TermsOfService from './components/TermsOfService';
 import Footer from './components/Footer';
 import FloatingWhatsapp from './components/FloatingWhatsapp';
 import Lenis from 'lenis';
 import { useEffect } from 'react';
+
+// Reset scroll on route change
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+}
+
 
 function App() {
   useEffect(() => {
@@ -36,37 +43,41 @@ function App() {
 
     requestAnimationFrame(raf);
 
-    // Handle Anchor Links independently for Lenis
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
+    // Handle Anchor Links with Event Delegation
+    const handleAnchorClick = (e) => {
+      const anchor = e.target.closest('a[href^="#"]');
+      if (anchor) {
         e.preventDefault();
-        lenis.scrollTo(this.getAttribute('href'));
-      });
-    });
+        const targetId = anchor.getAttribute('href').substring(1);
+        const targetElement = document.getElementById(targetId);
+        if (targetElement) {
+          lenis.scrollTo(targetElement);
+        }
+      }
+    };
+
+    document.addEventListener('click', handleAnchorClick);
 
     return () => {
       lenis.destroy();
+      document.removeEventListener('click', handleAnchorClick);
     };
   }, []);
 
   return (
-    <div className="font-body antialiased overflow-x-hidden">
-      <Header />
-      <main>
-        <Hero />
-        <Features />
-        <Brands />
-        <About />
-        <QuoteBanner />
-        <Products />
-        <Testimonials />
-
-        <Partners />
-        <FAQ />
-      </main>
-      <Footer />
-      <FloatingWhatsapp />
-    </div>
+    <Router>
+      <ScrollToTop />
+      <div className="font-body antialiased overflow-x-hidden relative">
+        <Header />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/politica-de-privacidade" element={<PrivacyPolicy />} />
+          <Route path="/termos-de-servico" element={<TermsOfService />} />
+        </Routes>
+        <Footer />
+        <FloatingWhatsapp />
+      </div>
+    </Router>
   );
 }
 

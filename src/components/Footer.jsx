@@ -8,6 +8,7 @@ import eloLogo from '../assets/footer/ELO_LOGO.svg';
 import hipercardLogo from '../assets/footer/HIPERCARD.svg';
 import amexLogo from '../assets/footer/AMERICAN_EXPRESS_LOGO.svg';
 import dinersLogo from '../assets/footer/DINERS_CLUB_LOGO.svg';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
     return (
@@ -78,8 +79,8 @@ const Footer = () => {
                 <div className="mt-20 pt-8 border-t border-gray-900 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500 gap-4">
                     <p>&copy; 2026 Casa do Asiático. Todos os direitos reservados.</p>
                     <div className="flex gap-6">
-                        <a href="#" className="hover:text-white transition-colors">Política de privacidade</a>
-                        <a href="#" className="hover:text-white transition-colors">Termos de serviço</a>
+                        <Link to="/politica-de-privacidade" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Política de privacidade</Link>
+                        <Link to="/termos-de-servico" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Termos de serviço</Link>
                     </div>
                     <div className="flex gap-4">
                         <a href="https://wa.me/5511988366393" target="_blank" rel="noreferrer" className="hover:text-primary transition-colors">

@@ -2,10 +2,12 @@ import React, { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import logo from '../assets/logo.svg';
+import { Link, useLocation } from 'react-router-dom';
 
 const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
+    const location = useLocation();
 
     React.useEffect(() => {
         const handleScroll = () => {
@@ -17,10 +19,12 @@ const Header = () => {
 
     const toggleMenu = () => setIsOpen(!isOpen);
 
+    const isHomePage = location.pathname === '/';
+
     const navLinks = [
-        { title: "SOBRE NÓS", href: "#about" },
-        { title: "PEÇAS", href: "#products" },
-        { title: "CONTATO", href: "#contact" },
+        { title: "SOBRE NÓS", href: isHomePage ? "#about" : "/#about" },
+        { title: "PEÇAS", href: isHomePage ? "#products" : "/#products" },
+        { title: "CONTATO", href: isHomePage ? "#contact" : "/#contact" },
     ];
 
     return (
@@ -29,7 +33,9 @@ const Header = () => {
                 <div className="flex items-center justify-between h-16">
                     {/* Logo */}
                     <div className="flex-shrink-0 flex items-center cursor-pointer">
-                        <img src={logo} alt="Casa do Asiático" className="h-9 w-auto max-w-[140px] object-contain" />
+                        <Link to="/">
+                            <img src={logo} alt="Casa do Asiático" className="h-9 w-auto max-w-[140px] object-contain" />
+                        </Link>
                     </div>
 
                     {/* Desktop Nav */}
