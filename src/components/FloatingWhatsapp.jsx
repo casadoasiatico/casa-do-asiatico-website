@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import { trackEvent, sendServerEvent } from '../utils/metaPixel';
 
 const FloatingWhatsapp = () => {
     const [isVisible, setIsVisible] = useState(true);
@@ -28,6 +29,10 @@ const FloatingWhatsapp = () => {
             href="https://wa.me/5511988366393"
             target="_blank"
             rel="noreferrer"
+            onClick={() => {
+                trackEvent('Contact', { method: 'whatsapp' });
+                sendServerEvent('Contact', { method: 'whatsapp' });
+            }}
             className="fixed bottom-6 right-4 sm:right-6 z-50 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg flex items-center justify-center transition-colors"
             initial={{ scale: 0, opacity: 0 }}
             animate={{
