@@ -9,13 +9,15 @@ import FloatingWhatsapp from './components/FloatingWhatsapp';
 import Lenis from 'lenis';
 import { useEffect } from 'react';
 
-// Reset scroll on route change
+// Reset scroll on route change (skip if there's a hash in the URL)
 function ScrollToTop() {
-  const { pathname } = useLocation();
+  const { pathname, hash } = useLocation();
 
   useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [pathname]);
+    if (!hash) {
+      window.scrollTo(0, 0);
+    }
+  }, [pathname, hash]);
 
   return null;
 }
@@ -43,15 +45,40 @@ function App() {
 
     requestAnimationFrame(raf);
 
+    // Handle initial page load with hash in URL
+    const handleInitialHash = () => {
+      const hash = window.location.hash;
+      if (hash) {
+        const targetId = hash.substring(1);
+        // Small delay to ensure the page is fully rendered
+        setTimeout(() => {
+          if (targetId === 'contato') {
+            lenis.scrollTo('bottom', { immediate: true });
+          } else {
+            const targetElement = document.getElementById(targetId);
+            if (targetElement) {
+              lenis.scrollTo(targetElement, { immediate: true });
+            }
+          }
+        }, 100);
+      }
+    };
+
+    handleInitialHash();
+
     // Handle Anchor Links with Event Delegation
     const handleAnchorClick = (e) => {
       const anchor = e.target.closest('a[href^="#"]');
       if (anchor) {
         e.preventDefault();
         const targetId = anchor.getAttribute('href').substring(1);
-        const targetElement = document.getElementById(targetId);
-        if (targetElement) {
-          lenis.scrollTo(targetElement);
+        if (targetId === 'contato') {
+          lenis.scrollTo('bottom');
+        } else {
+          const targetElement = document.getElementById(targetId);
+          if (targetElement) {
+            lenis.scrollTo(targetElement);
+          }
         }
       }
     };
