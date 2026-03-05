@@ -12,7 +12,7 @@ import { Link } from 'react-router-dom';
 
 const Footer = () => {
     return (
-        <footer id="contact" className="bg-black text-white">
+        <footer id="localizacao" className="bg-black text-white">
 
 
             {/* Map Section - Full Width */}

@@ -180,7 +180,7 @@ const Products = () => {
     const activeData = hotspots.find(h => h.id === activeHotspot);
 
     return (
-        <section id="products" className="py-16 sm:py-24 bg-white text-black overflow-hidden">
+        <section id="pecas" className="py-16 sm:py-24 bg-white text-black overflow-hidden">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center md:text-left">
                 <h2 className="text-4xl md:text-5xl font-heading font-bold uppercase tracking-tight leading-none mb-4">
                     Peças que Trabalhamos

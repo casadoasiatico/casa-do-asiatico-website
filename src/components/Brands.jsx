@@ -28,7 +28,7 @@ const marqueeBrands = [...brands, ...brands, ...brands];
 
 const Brands = () => {
     return (
-        <section className="py-16 md:py-32 bg-white text-black overflow-hidden relative border-b border-gray-100">
+        <section id="marcas" className="py-16 md:py-32 bg-white text-black overflow-hidden relative border-b border-gray-100">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-10 text-center md:text-left">
                 <h2 className="text-4xl md:text-5xl font-heading font-bold uppercase tracking-tight leading-none">
                     Marcas que Trabalhamos

@@ -22,9 +22,9 @@ const Header = () => {
     const isHomePage = location.pathname === '/';
 
     const navLinks = [
-        { title: "SOBRE NÓS", href: isHomePage ? "#about" : "/#about" },
-        { title: "PEÇAS", href: isHomePage ? "#products" : "/#products" },
-        { title: "CONTATO", href: isHomePage ? "#contact" : "/#contact" },
+        { title: "SOBRE NÓS", href: isHomePage ? "#sobre-nos" : "/#sobre-nos" },
+        { title: "PEÇAS", href: isHomePage ? "#pecas" : "/#pecas" },
+        { title: "CONTATO", href: isHomePage ? "#localizacao" : "/#localizacao" },
     ];
 
     return (
