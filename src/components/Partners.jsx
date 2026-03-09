@@ -122,7 +122,7 @@ const Partners = () => {
                         {/* Desktop-only button — pushed to bottom by justify-between */}
                         <div className="hidden lg:block mt-10">
                             <a
-                                href="https://wa.me/5511988366393?text=Ol%C3%A1!%20Sou%20de%20oficina%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20parceria."
+                                href="https://w.app/mecanico-casadoasiatico"
                                 target="_blank"
                                 rel="noreferrer"
                                 className="inline-block bg-primary hover:bg-red-700 text-white font-body font-bold py-3 px-8 uppercase tracking-wider transition-colors whitespace-nowrap text-sm sm:text-base"
@@ -148,7 +148,7 @@ const Partners = () => {
                 {/* Mobile-only button — appears after features */}
                 <div className="mt-10 text-center lg:hidden">
                     <a
-                        href="https://wa.me/5511988366393?text=Ol%C3%A1!%20Sou%20de%20oficina%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20parceria."
+                        href="https://w.app/mecanico-casadoasiatico"
                         target="_blank"
                         rel="noreferrer"
                         className="inline-block bg-primary hover:bg-red-700 text-white font-body font-bold py-3 px-8 uppercase tracking-wider transition-colors whitespace-nowrap text-sm sm:text-base"

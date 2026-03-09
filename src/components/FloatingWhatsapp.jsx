@@ -26,7 +26,7 @@ const FloatingWhatsapp = () => {
 
     return (
         <motion.a
-            href="https://wa.me/5511988366393"
+            href="https://w.app/casadoasiatico"
             target="_blank"
             rel="noreferrer"
             onClick={() => {

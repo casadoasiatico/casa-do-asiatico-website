@@ -67,7 +67,7 @@ const FAQ = () => {
                                         </p>
                                         {index === 4 && (
                                             <a
-                                                href="https://wa.me/5511988366393"
+                                                href="https://w.app/casadoasiatico"
                                                 target="_blank"
                                                 rel="noreferrer"
                                                 className="inline-block bg-primary text-white font-body font-bold py-2 px-6 text-sm uppercase mb-6"

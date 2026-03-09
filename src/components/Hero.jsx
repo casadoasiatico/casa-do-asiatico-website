@@ -48,7 +48,7 @@ const Hero = () => {
                     transition={{ duration: 0.5, delay: 0.6 }}
                 >
                     <a
-                        href="https://wa.me/5511988366393"
+                        href="https://w.app/casadoasiatico"
                         target="_blank"
                         rel="noreferrer"
                         className="inline-flex items-center gap-2 sm:gap-3 bg-primary hover:bg-red-700 text-white font-body font-bold text-sm sm:text-base py-2.5 px-5 sm:px-6 uppercase tracking-widest transition-all transform hover:scale-105 hover:shadow-[0_0_20px_rgba(218,13,38,0.5)] border border-red-500/50 whitespace-nowrap"

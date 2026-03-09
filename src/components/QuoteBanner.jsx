@@ -34,7 +34,7 @@ const QuoteBanner = () => {
                     transition={{ duration: 0.8, delay: 0.4 }}
                 >
                     <a
-                        href="https://wa.me/5511988366393"
+                        href="https://w.app/casadoasiatico"
                         target="_blank"
                         rel="noreferrer"
                         className="inline-block bg-primary hover:bg-red-700 text-white font-body font-bold py-3 px-8 uppercase tracking-wider transition-colors whitespace-nowrap text-sm sm:text-base"
