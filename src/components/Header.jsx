@@ -54,7 +54,7 @@ const Header = () => {
                     {/* CTA Button */}
                     <div className="hidden md:block">
                         <a
-                            href="https://w.app/casadoasiatico"
+                            href="https://wa.me/5511988366393?text=Ol%C3%A1!%20%F0%9F%91%8B%F0%9F%88%B4%0AQuero%20saber%20sobre%20uma%20pe%C3%A7a."
                             target="_blank"
                             rel="noreferrer"
                             className="bg-primary hover:bg-red-700 text-white font-body font-bold py-1.5 px-5 text-sm uppercase tracking-wider transition-all transform hover:scale-105 whitespace-nowrap"
@@ -93,7 +93,7 @@ const Header = () => {
                                 </a>
                             ))}
                             <a
-                                href="https://w.app/casadoasiatico"
+                                href="https://wa.me/5511988366393?text=Ol%C3%A1!%20%F0%9F%91%8B%F0%9F%88%B4%0AQuero%20saber%20sobre%20uma%20pe%C3%A7a."
                                 target="_blank"
                                 rel="noreferrer"
                                 className="block mt-4 w-full text-center bg-primary text-white font-body font-bold py-3 uppercase tracking-wider whitespace-nowrap"

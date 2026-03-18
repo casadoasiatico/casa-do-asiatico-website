@@ -74,7 +74,7 @@ const TooltipContent = ({ hotspot }) => (
         )}
         <div className="px-4 pb-4">
             <a
-                href="https://w.app/casadoasiatico"
+                href="https://wa.me/5511988366393?text=Ol%C3%A1!%20%F0%9F%91%8B%F0%9F%88%B4%0AQuero%20saber%20sobre%20uma%20pe%C3%A7a."
                 target="_blank"
                 rel="noreferrer"
                 className="block w-full text-center bg-primary hover:bg-red-700 text-white text-xs font-bold py-2 uppercase tracking-wide transition-colors"
@@ -221,7 +221,7 @@ const Products = () => {
                 </AnimatePresence>
 
                 <a
-                    href="https://w.app/casadoasiatico"
+                    href="https://wa.me/5511988366393?text=Ol%C3%A1!%20%F0%9F%91%8B%F0%9F%88%B4%0AQuero%20saber%20sobre%20uma%20pe%C3%A7a."
                     target="_blank"
                     rel="noreferrer"
                     className="mt-8 sm:mt-12 inline-block bg-primary hover:bg-red-700 text-white font-body font-bold py-3 px-6 sm:px-8 uppercase tracking-wider transition-colors text-sm sm:text-base whitespace-nowrap"
